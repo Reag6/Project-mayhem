@@ -1,0 +1,28 @@
+{% extends "app/layout.html" %}
+
+{% load static %}
+
+{% block content %}
+<div>
+    <b>{{ title }}</b>
+</div>
+
+<hr />
+
+<div class="column">
+    <h2>Процесс окрашивания:</h2>
+    <VIDEO src="/media/okrashivanie.mp4" controls="controls" width="400" height="300" poster="/media/zastavkaO.jpg"></VIDEO>
+    <p> <br /> На видео показан процесс окрашивания, данная услуга в нашем салоне стоит от 700 рублей, в этом случае <i> 1000.</i></p>
+</div>
+
+<hr />
+
+<div class="column">
+    <h2>Процесс маникюра:</h2>
+    <VIDEO src="/media/manik.mp4" controls="controls" width="400" height="300" poster="/media/zastavkaM.jpg"></VIDEO>
+    <p> <br />
+        На видео показан процесс наращивания и покрытия, стоимости данных услуг в нашем салоне начинаются от 500 и 400 рублей соответсвенно, <br />
+        в этом случае общая стоимость работы - <i>1100 рублей.</i>
+    </p>
+</div>
+{% endblock %}

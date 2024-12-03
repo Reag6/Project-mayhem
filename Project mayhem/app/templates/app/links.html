@@ -1,0 +1,35 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<b>{{ title }}</b>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Сам себе визажист</h2>
+        <a href="https://vk.com/elena_gennadievna_1206" target="_blank">
+            <img src="{% static 'app/content/reklama1.jpg' %}" alt="Logo1" class="raboti" />
+        </a>
+        <br>
+    </div>
+
+    <div class="col-md-4">
+        <h2>30 модных причёсок</h2>
+        <a href="https://lafoy.ru/modnye-zhenskie-strizhki-2024-3817" target="_blank">
+            <img src="{% static 'app/content/pri.jpg' %}" alt="Logo2" class="raboti" />
+        </a>
+        <br>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Уход за волосами</h2>
+        <a href="https://www.vichy.ru/vmag/pravila-uhoda-za-volosami?utm_source=yandexsearch&utm_medium=paid_search&utm_content=vic_haca_range_text_eg&utm_campaign=vic_yand_ao_haca_range_gene_search_text_eg_ru_ym116301482_oacw&utm_term=---autotargeting&yclid=9885570941319118847" target="_blank">
+            <img src="{% static 'app/content/uhod.jpg' %}" alt="Logo3" class="raboti" />
+        </a>
+        <br>
+    </div>
+</div>
+
+{% endblock %}

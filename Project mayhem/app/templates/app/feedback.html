@@ -1,0 +1,104 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load static %}
+
+{% if form != None %}
+
+<br>
+<b>Пожалуйста, оставьте свой отзыв о нашем салоне</b>
+<br>
+<div>
+    <form id="feedbackForm" method="POST">
+        {% csrf_token %}
+        <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
+        {{ form.name }} <br><br>
+        <label for="{{ form.surname.id_for_label }}">{{ form.surname.label }}:</label>
+        {{ form.surname }} <br><br>
+        <label for="{{ form.gender.id_for_label }}">{{ form.gender.label }}:</label>
+        {{ form.gender }} <br><br>
+        <label for="{{ form.estimation.id_for_label }}">{{ form.estimation.label }}:</label>
+        {{ form.estimation }} <br><br>
+        <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+        {{ form.email }} <br><br>
+        <label for="{{ form.notice.id_for_label }}">{{ form.notice.label }}</label>
+        {{ form.notice }} <br><br>
+        <label for="{{ form.message.id_for_label }}">{{ form.message.label }}:</label>
+        {{ form.message }} <br><br>
+        <input type="submit" value="Отправить">
+    </form>
+</div>
+{% else %}
+<br>
+<b>Благодарим Вас за оценку!</b>
+
+<br>
+<ul>
+    <li>
+        <span>Вы поставили нам:</span>
+        <span class="estimation">{{ data.estimation }}</span>
+    </li>
+    <li>
+        <span>Ваши предложения и замечания:</span>
+        <div class="message-container">
+            <textarea class="message" readonly>{{ data.message }}</textarea>
+        </div>
+    </li>
+</ul>
+
+{% endif %}
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log('DOM fully loaded and parsed');
+
+        const form = document.querySelector('form#feedbackForm');
+
+        if (form) {
+            console.log('Form found:', form);
+            const submitButton = form.querySelector('input[type="submit"]');
+            const inputFields = form.querySelectorAll('input, textarea, select');
+
+            if (submitButton) {
+                console.log('Submit button found:', submitButton);
+                // Изменение цвета надписи на кнопке при наведении
+                submitButton.addEventListener('mouseover', function () {
+                    console.log('Mouse over submit button');
+                    submitButton.style.color = '#282828'; // color
+                });
+
+                submitButton.addEventListener('mouseout', function () {
+                    console.log('Mouse out submit button');
+                    submitButton.style.color = '';
+                });
+            } else {
+                console.error('Submit button not found');
+            }
+
+            if (inputFields.length > 0) {
+                console.log('Input fields found:', inputFields);
+                // Изменение цвета фона полей ввода при фокусе
+                inputFields.forEach(function (field) {
+                    field.addEventListener('focus', function () {
+                        console.log('Focus on input field:', field);
+                        field.style.backgroundColor = 'lightgreen'; // background-color
+                    });
+
+                    field.addEventListener('blur', function () {
+                        console.log('Blur on input field:', field);
+                        field.style.backgroundColor = '';
+                    });
+                });
+            } else {
+                console.error('No input fields found');
+            }
+        } else {
+            console.error('Form not found');
+        }
+    });
+</script>
+
+{% endblock %}

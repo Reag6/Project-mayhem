@@ -1,0 +1,285 @@
+body {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    background-color: #fff0f5;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    /*background-color: цвет; заливка по центру*/
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+    
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+footer {
+    text-align: center; /* Центрирование текста по горизонтали */
+    
+}
+.ava {
+    width: 30px;
+    height: 30px;
+    /*border: 5px solid #000;  Черная обводка толщиной 5 пикселей */
+}
+.raboti {
+    width: 300px;
+    height: 400px;
+    border: 5px solid #000; /* Черная обводка толщиной 5 пикселей */
+
+}
+
+.Logo {
+
+    width: 400px;
+    height: 300px;
+    border: 5px solid #000; /* Черная обводка толщиной 5 пикселей */
+}
+
+.karta {
+
+    width: 400px;
+    height: 300px;
+}
+
+li {
+    font-size: 20px;
+}
+
+
+/* Основные стили для формы (здравствуйте и кнопка выход)
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+}
+*/
+
+/* Стили для меток */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Стили для полей ввода */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Стили для чекбоксов */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Стили для кнопки отправки */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+/* Стили для сообщений об ошибках */
+.errorlist {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Стили для блока данных */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+    ul li {
+        margin-bottom: 10px;
+    }
+
+        ul li span {
+            font-weight: bold;
+        }
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 600px; /* Ширина столбика */
+    /* margin: 10px;  Отступы */
+    border: 1px solid #000; /* Обводка */
+    padding: 10px; /* Внутренние отступы */
+}
+
+z {
+ font-size: 20px;
+}
+
+/*li {
+  font-size: 15px;
+}
+*/
+
+h5 {
+    color: grey;
+}
+
+.small-text {
+    font-size: 12px; /* Установите нужный размер шрифта */
+}
+
+.img-responsive {
+
+    border: 5px solid #000; /* Черная обводка толщиной 5 пикселей */
+}
+
+.carousel-inner .item img {
+    width: 100%; /* Ширина изображения */
+    height: 500px; /* Высота изображения */
+    object-fit: cover; /* Масштабирование изображения */
+}
+
+.jumbotron {
+    background-color: #f0f8ff;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+
+.submit-hover {
+    color: #282828;
+}
+
+.input-focus {
+    background-color: lightgreen;
+}
+
+.navbar-nav > li > a.active {
+    color: grey; 
+}
+
+.navbar-nav > li {
+
+    font-size: 20px;
+}
+
+.navbar {
+
+    width: 100%; /* Устанавливаем ширину навбара в 100% от ширины родительского элемента */
+}
+
+.container-fluid {
+    width: 100%; /* Устанавливаем ширину контейнера в 100% */
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.custom-nav-text {
+    font-size: 18px; /* Устанавливаем меньший размер шрифта */
+}
+
+video {
+    border: 1px solid #000;
+}
+
+z1 {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+
+b {
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+
+t {
+    font-size: 20px;
+}
+
+.btn-default1 {
+    background-color: #45a049;
+    color: white;
+}
+
+    .btn-default1:hover {
+        background-color: #45a049;
+        color: #282828;
+    }
+.form-group input:focus {
+    background-color: lightgreen;
+}
+
+.message {
+    background-color: gainsboro;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    width: 350px;
+    height: 350px; /* Вы можете изменить высоту по вашему усмотрению */
+    border: 1px solid #000;
+    resize: none; /* Отключает возможность изменения размера поля */
+}
+
+.message-container {
+    margin-top: 10px; /* Отступ сверху для разделения строк */
+}

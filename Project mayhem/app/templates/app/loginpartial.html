@@ -1,0 +1,32 @@
+﻿{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+
+<form id="logoutForm" action="{% url 'logout' %}" method="post" class="navbar-right" {% if user.is_authenticated %}style="display: none;" {% endif %}>
+
+    {% csrf_token %}
+
+</form>
+
+<ul class="nav navbar-nav navbar-right">
+
+    {% if user.is_authenticated %}
+
+    {% if user.is_superuser %}
+
+    <li class="nav-item custom-nav-item"><a href="javascript:document.getElementById('logoutForm').submit()" class="custom-nav-link">Выход</a></li>
+
+    {% else %}
+
+    <li class="nav-item custom-nav-item"><span class="navbar-brand custom-nav-text">Здравствуйте, {{ user.username }}!</span></li>
+    <li class="nav-item custom-nav-item"><a href="javascript:document.getElementById('logoutForm').submit()" class="custom-nav-link">Выход</a></li>
+
+    {% endif %}
+
+    {% else %}
+
+    <li class="nav-item custom-nav-item"><a href="{% url 'login' %}" class="custom-nav-link">Вход</a></li>
+
+    {% endif %}
+
+</ul>

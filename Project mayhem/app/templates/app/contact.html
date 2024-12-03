@@ -1,0 +1,35 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<b> {{ title }} </b>
+<h3> {{ message }} </h3>
+
+<address>
+    <strong>Мастер ногтевого сервиса:</strong>   <a href="https://vk.com/ladykasic">Алёна Белая</a><br />
+    <strong>Мастер парикмахерского искусства:</strong> <a href="https://vk.com/okamenskaya92">Ольга Каменская</a><br />
+    <strong>VK:</strong> <a href="https://vk.com/artbeuatyostrov">Группа</a>
+</address>
+
+<address>
+    Beauty ART Ostrov<br />
+    Ул. Карла Маркса 4, Остров<br />
+    <abbr title="Телефон">Номер:</abbr>
+    +7 (900) 996-50-55 <br />
+    Записаться можно по телефону или в группе VK
+</address>
+
+<div class="row">
+    <div class="col-md-4">
+        <a href="https://yandex.ru/maps/20641/ostrov/house/ulitsa_karla_marksa_4/ZkEYdQJiTUIDQFttfX91dXtjZg==/?ll=28.353996%2C57.344429&z=16.71" target="_blank">
+            <img src="{% static 'app/content/karta.png' %}" alt="karta" class="karta" />
+        </a>
+        <br>
+    </div>
+</div>
+
+
+
+    {% endblock %}

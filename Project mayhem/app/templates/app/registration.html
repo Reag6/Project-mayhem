@@ -1,0 +1,51 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<b>Регистрация пользователя</b>
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="id_username">Имя пользователя:</label>
+        {{ regform.username }}
+    </div>
+    <div class="form-group">
+        <label for="id_password1">Пароль:</label>
+        {{ regform.password1 }}
+        <div id="password-help" class="help-text" style="display: none;">
+            <p> Справка: </p>
+          
+            <li>не используйте лёгкие пароли;</li>
+            <li>не используйте один и тот же пароль;</li>
+            <li>используйте латиницу, строчные и заглавные буквы, цифры;</li>
+            <li>запомните или запишите пароль.</li>
+            
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="id_password2">Подтверждение пароля:</label>
+        {{ regform.password2 }}
+    </div>
+    <button type="submit" class="save btn btn-default1">
+        Зарегистрировать
+    </button>
+</form>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const passwordField = document.getElementById('id_password1');
+        const passwordHelp = document.getElementById('password-help');
+
+        passwordField.addEventListener('focus', function () {
+            passwordHelp.style.display = 'block';
+        });
+
+        passwordField.addEventListener('blur', function () {
+            passwordHelp.style.display = 'none';
+        });
+    });
+</script>
+
+{% endblock %}
